@@ -84,4 +84,8 @@ def read_body(item: Item):
 > - for path parameters → `Path`
 > - for body → `Body`
 > - for HTTP headers → `Header`
-> - for Pydantic model attributes → `Field`
+> - for Pydantic model attributes → `Field` from Pydantic
+
+
+for more detailed and interactive explainations, Please visit FastAPI [official documentation](https://fastapi.tiangolo.com/tutorial/) - a great resource.
+
