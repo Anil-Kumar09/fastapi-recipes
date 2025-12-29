@@ -9,7 +9,7 @@ Simple snippets for accessing different parts of an HTTP request in FastAPI.
 
 Setup Include these imports for all examples:
 
-```
+```python
 from typing import Annotated
 from fastapi import FastAPI, Header
 from pydantic import BaseModel
@@ -23,7 +23,7 @@ app = FastAPI()
 
 FastAPI detects path parameters when the function argument matches a variable in the route path (inside {}).
 
-```
+```python
 @app.get("/items/{item_id}")
 def read_path(item_id: int):
     return {"path_value": item_id}
@@ -38,7 +38,7 @@ Use `Header()` to tell FastAPI to look in the HTTP headers.
 > [!IMPORTANT]
 > - FastAPI converts the header name (e.g., User-Agent) to snake_case (user_agent).
 
-```
+```python
 @app.get("/headers/")
 def read_header(user_agent: Annotated[str | None, Header()] = None):
     return {"header_value": user_agent}
@@ -48,7 +48,7 @@ def read_header(user_agent: Annotated[str | None, Header()] = None):
 
 Any function argument that is not a path parameter and is a simple type (like int, str) is automatically interpreted as a query parameter.
 
-```
+```python
 # URL example: /query/?q=test
 
 @app.get("/query/")
@@ -61,7 +61,7 @@ def read_query(q: str):
 
 Declare a Pydantic model and use it as a type hint. FastAPI interprets Pydantic models as the request body.
 
-```
+```python
 class Item(BaseModel):
     name: str
     price: float
