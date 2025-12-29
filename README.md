@@ -5,7 +5,7 @@ A curated collection of task-specific FastAPI recipes and snippets. Practical, s
 
 ---
 
-simple snippets for accessing different parts of an HTTP request in FastAPI.
+Simple snippets for accessing different parts of an HTTP request in FastAPI.
 
 Setup Include these imports for all examples:
 
@@ -33,7 +33,7 @@ def read_path(item_id: int):
 
 ## 2. Fetch Header Value
 
-Use Header() to tell FastAPI to look in the HTTP headers. 
+Use `Header()` to tell FastAPI to look in the HTTP headers. 
 
 **NOTE** : FastAPI converts the header name (e.g., User-Agent) to snake_case (user_agent).
 
@@ -69,3 +69,9 @@ class Item(BaseModel):
 def read_body(item: Item):
     return {"body_received": item}
 ```
+
+
+> [!NOTE]  If the path function parameter is not in the path path ?
+> 
+> Is it a `str`, `int`, or `bool` ? → **Query**
+> Is it a `Pydantic Model`, `dict`, or `list` ? → **Body**
