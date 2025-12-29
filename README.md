@@ -35,7 +35,8 @@ def read_path(item_id: int):
 
 Use `Header()` to tell FastAPI to look in the HTTP headers. 
 
-**NOTE** : FastAPI converts the header name (e.g., User-Agent) to snake_case (user_agent).
+> [!IMPORTANT]
+> - FastAPI converts the header name (e.g., User-Agent) to snake_case (user_agent).
 
 ```
 @app.get("/headers/")
