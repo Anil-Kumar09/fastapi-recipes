@@ -80,8 +80,8 @@ def read_body(item: Item):
 
 > [!TIP]
 > if we want to declare more validations and to add metadata, we can use below classes 
-> - for query parameters → `Query`, 
-> - for path parameters → `Path`.
+> - for query parameters → `Query`
+> - for path parameters → `Path`
 > - for body → `Body`
 > - for HTTP headers → `Header`
 > - for Pydantic model attributes → `Field`
