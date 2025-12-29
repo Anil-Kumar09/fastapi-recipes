@@ -77,7 +77,8 @@ def read_body(item: Item):
 > Is it a `Pydantic Model`, `dict`, or `list` ? → **Body**
 
 
->[!NOTE]  If the path function parameter is not in the path path ?
+> [!NOTE]  
+> If the path function parameter is not in the path path ?
 > 
->Is it a `str`, `int`, or `bool` ? → **Query**
->Is it a `Pydantic Model`, `dict`, or `list` ? → **Body**
+> - Is it a `str`, `int`, or `bool` ? → **Query**
+> - Is it a `Pydantic Model`, `dict`, or `list` ? → **Body**
